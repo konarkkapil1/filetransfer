@@ -13,9 +13,6 @@
         $token = $_COOKIE['token'];
         try{
             $data = JWT::decode($token,$jwtkey,[$jwtalgo]);
-            $email = $data->data->email;            //getting email from the jwt token
-            $userid = $data->data->userid;          //getting userid from jwt token
-            $deptid = $data->data->deptid;          //this dept id goes directly to the sql query from here
         }
         catch(Exception $e){               //checking if jwt decode worked or not if not throw error
             echo json_encode([
@@ -23,6 +20,9 @@
             ]);
             die();
         }
+        $email = $data->data->email;            //getting email from the jwt token
+        $userid = $data->data->userid;          //getting userid from jwt token
+        $deptid = $data->data->deptid;          //this dept id goes directly to the sql query from here
 
     }
     else{

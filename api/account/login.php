@@ -7,9 +7,20 @@
     require_once('../vendor/autoload.php');
     use \Firebase\JWT\JWT;
 
-    //getting email and password from frontend
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    
+    if(!empty($_POST['email']) && !empty($_POST['password'])){
+        //getting email and password from frontend
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+    }else{
+        echo json_encode([
+            "error" => "empty values",
+        ]);
+        die();
+    }
+    
+
+    
 
     //sql query for login to be executed
     $sql = "select * from users where email='$email' and password='$password'";
