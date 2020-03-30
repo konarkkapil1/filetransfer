@@ -14,17 +14,22 @@
     $query = mysqli_query($conn,$sql);
 
     //fetching all records from db table
-    while($res = mysqli_fetch_assoc($query)){
-        $filedata[] = array(
-            "serial" => $res['serial'],
-            "trackingid" => $res['tracking_id'],
-            "file_number" => $res['file_number'],
-            "from" => $res['from_id'],
-            "to" => $res['to_id']
-        );
+    if(mysqli_num_rows($query) > 0){
+        while($res = mysqli_fetch_assoc($query)){
+            $filedata[] = array(
+                "serial" => $res['serial'],
+                "trackingid" => $res['tracking_id'],
+                "file_number" => $res['file_number'],
+                "from" => $res['from_id'],
+                "to" => $res['to_id'],
+                "timestamp"=>$res['transfer_timestamp']
+            );
+        }
+        echo json_encode($filedata);
+    }else{
+        echo json_encode(null);
     }
-
-    echo json_encode($filedata);
+    
 
 
 ?>

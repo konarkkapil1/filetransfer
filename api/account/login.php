@@ -28,17 +28,17 @@
     //executing the query to database
     $query = mysqli_query($conn,$sql);
 
-
-    
     //checking number of rows returned by query
     if(mysqli_num_rows($query) == 1){
-
+        
         //fetching user details from databse to be inserted into jwt token
         $res = mysqli_fetch_assoc($query);
         $userid = $res['user_id'];
         $deptid = $res['dept_id'];
-         
-
+        $role = $res['role'];
+        $name = $res['name'];
+        $phone = $res['phone'];
+        $email = $res['email'];
         //creating all the variable to be used in jwt token
         $tokenId = uniqid();
         $data = [
@@ -49,9 +49,13 @@
             'data' => [                  // Data related to the signer user
                 'email'   => $email,      // email from the users table
                 'userid' => $userid,
-                'deptid' => $deptid
+                'deptid' => $deptid,
+                'role' => $role,
+                'name' => $name,
+                'phone' => $phone,
             ]
         ];
+
         //creating the actual jwt token
         $jwt = JWT::encode(
             $data,      //Data to be encoded in the JWT

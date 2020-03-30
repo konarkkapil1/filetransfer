@@ -1,4 +1,5 @@
 <?php
+
     require "../config/db.php";
     require "../security/pagevalidation.php";
     require "../state/variables.php";
