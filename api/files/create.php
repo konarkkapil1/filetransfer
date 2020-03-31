@@ -19,6 +19,8 @@
     //sql query to be executed to insert file into the database
     $sql = "insert into files (file_no,file_name,file_desc,dept_id,receiver_id,submittor_name,submittor_contact,submittor_email) VALUES('$fileno','$filename','$filedesc','$deptid','$receiverid','$submittorname','$submittorcontact','$submittoremail')";
 
+    //assign the movement of file also here
+
     //checking if the query runs or not
     if(mysqli_query($conn,$sql)){
         echo json_encode([
