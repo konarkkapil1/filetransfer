@@ -7,19 +7,24 @@
     use \Firebase\JWT\JWT;
     require "../jwt/decode.php";
 
-    $sql = "select * from users";
+    $sql = 'select * from users where dept_id="'.$deptid.'"';
     $query = mysqli_query($conn,$sql);
 
     if($query){
         while($res = mysqli_fetch_assoc($query)){
-            $userdata[] = array(
-                "userid" => $res['user_id'],
-                "name" => $res['name'],
-                "phone" => $res['phone'],
-                "email" => $res['email']
-            );
+            if(!($res['user_id'] == $userid)){
+                $userdata[] = array(
+                    "userid" => $res['user_id'],
+                    "name" => $res['name'],
+                    "phone" => $res['phone'],
+                    "email" => $res['email'],
+                    "deptid" => $res['dept_id'],
+                );
+            }
         }
         echo json_encode($userdata);
+    }else{
+        echo json_encode(null);
     }
 
 
