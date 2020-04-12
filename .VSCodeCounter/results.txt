@@ -1,0 +1,72 @@
+Date : 2020-04-11 00:31:57
+Directory : /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api
+Total : 33 files,  1429 codes, 382 comments, 285 blanks, all 2096 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PHP      |         28 |      1,113 |        382 |        248 |      1,743 |
+| Markdown |          1 |        168 |          0 |         33 |        201 |
+| JSON     |          4 |        148 |          0 |          4 |        152 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                |         33 |      1,429 |        382 |        285 |      2,096 |
+| account                                                                                                          |          4 |        153 |         14 |         29 |        196 |
+| config                                                                                                           |          1 |          7 |          0 |          2 |          9 |
+| department                                                                                                       |          2 |         41 |          2 |          6 |         49 |
+| files                                                                                                            |          6 |        212 |         15 |         63 |        290 |
+| jwt                                                                                                              |          1 |         28 |          3 |          3 |         34 |
+| security                                                                                                         |          1 |          8 |          1 |          2 |         11 |
+| state                                                                                                            |          1 |          9 |          4 |          2 |         15 |
+| testing                                                                                                          |          1 |         23 |          1 |          6 |         30 |
+| vendor                                                                                                           |         14 |        879 |        342 |        170 |      1,391 |
+| vendor/composer                                                                                                  |          7 |        383 |        153 |         77 |        613 |
+| vendor/firebase                                                                                                  |          6 |        493 |        188 |         89 |        770 |
+| vendor/firebase/php-jwt                                                                                          |          6 |        493 |        188 |         89 |        770 |
+| vendor/firebase/php-jwt/src                                                                                      |          4 |        296 |        188 |         55 |        539 |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                         | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/account/fetch.php                                         | PHP      |         26 |          1 |          4 |         31 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/account/fetchcurrent.php                                  | PHP      |         49 |          1 |          4 |         54 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/account/login.php                                         | PHP      |         56 |          9 |         14 |         79 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/account/signup.php                                        | PHP      |         22 |          3 |          7 |         32 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/composer.json                                             | JSON     |          5 |          0 |          1 |          6 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/composer.lock                                             | JSON     |         64 |          0 |          1 |         65 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/config/db.php                                             | PHP      |          7 |          0 |          2 |          9 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/department/assignmanager.php                              | PHP      |         20 |          1 |          3 |         24 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/department/create.php                                     | PHP      |         21 |          1 |          3 |         25 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/create.php                                          | PHP      |         34 |          4 |          6 |         44 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/current.php                                         | PHP      |         41 |          1 |         11 |         53 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/history.php                                         | PHP      |         27 |          1 |          7 |         35 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/track.php                                           | PHP      |         40 |          2 |         14 |         56 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/tracking.php                                        | PHP      |         47 |          4 |         16 |         67 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/files/transfer.php                                        | PHP      |         23 |          3 |          9 |         35 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/jwt/decode.php                                            | PHP      |         28 |          3 |          3 |         34 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/security/pagevalidation.php                               | PHP      |          8 |          1 |          2 |         11 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/state/variables.php                                       | PHP      |          9 |          4 |          2 |         15 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/testing/testing.php                                       | PHP      |         23 |          1 |          6 |         30 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/autoload.php                                       | PHP      |          3 |          1 |          4 |          8 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/ClassLoader.php                           | PHP      |        253 |        148 |         45 |        446 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/autoload_classmap.php                     | PHP      |          5 |          1 |          4 |         10 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/autoload_namespaces.php                   | PHP      |          5 |          1 |          4 |         10 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/autoload_psr4.php                         | PHP      |          6 |          1 |          4 |         11 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/autoload_real.php                         | PHP      |         40 |          1 |         12 |         53 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/autoload_static.php                       | PHP      |         24 |          1 |          7 |         32 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/composer/installed.json                            | JSON     |         50 |          0 |          1 |         51 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/README.md                         | Markdown |        168 |          0 |         33 |        201 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/composer.json                     | JSON     |         29 |          0 |          1 |         30 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/src/BeforeValidException.php      | PHP      |          5 |          0 |          3 |          8 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/src/ExpiredException.php          | PHP      |          5 |          0 |          3 |          8 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/src/JWT.php                       | PHP      |        281 |        188 |         46 |        515 |
+| /Applications/XAMPP/xamppfiles/htdocs/filetransfer/api/vendor/firebase/php-jwt/src/SignatureInvalidException.php | PHP      |          5 |          0 |          3 |          8 |
+| Total                                                                                                            |          |      1,429 |        382 |        285 |      2,096 |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

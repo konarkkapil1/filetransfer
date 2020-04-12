@@ -7,12 +7,12 @@
     use \Firebase\JWT\JWT;
     require "../jwt/decode.php";
 
-    $sql = 'select * from movement where to_id="'.$userid.'" ORDER BY transfer_timestamp DESC';
+    $sql = 'select * from movement where to_id="'.$userid.'"';
     $query = mysqli_query($conn,$sql);
 
     if($query){
         while($res = mysqli_fetch_assoc($query)){
-            $sql_latest = 'select * from movement where file_number="'.$res['file_number'].'" ORDER BY transfer_timestamp DESC LIMIT 1';
+            $sql_latest = 'select * from movement where file_number="'.$res['file_number'].'" ORDER BY serial DESC LIMIT 1';
             $query_latest = mysqli_query($conn,$sql_latest);
             if($query_latest){
                 $records = mysqli_fetch_assoc($query_latest);

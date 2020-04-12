@@ -39,6 +39,14 @@
         $name = $res['name'];
         $phone = $res['phone'];
         $email = $res['email'];
+
+        $sql_dept_name = "select * from dept where dept_id='".$deptid."'"; 
+        $query_dept_name = mysqli_query($conn,$sql_dept_name);
+        if($query_dept_name){
+            $fetch = mysqli_fetch_assoc($query_dept_name);
+            $deptname = $fetch['dept_name'];
+        }
+
         //creating all the variable to be used in jwt token
         $tokenId = uniqid();
         $data = [
@@ -66,7 +74,15 @@
         echo json_encode(array(
             //login success create a user token here
             "success" => "logged in successfully",
-            "token" => $jwt
+            "token" => $jwt,
+            "userid" => $userid,
+            "role" => $role,
+            "email" => $email,
+            "deptid" => $deptid,
+            "name" => $name,
+            "phone" => $phone,
+            "email" => $email,
+            "deptname" => $deptname
         ));
     }else{
         echo json_encode(array(
