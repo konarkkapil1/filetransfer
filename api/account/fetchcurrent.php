@@ -29,7 +29,8 @@
                                 "email" => $res['email'],
                                 "roleid" => $res['role'],
                                 "rolename" => $getrole['role_name'],
-                                "deptname" => $getdept['dept_name']
+                                "deptname" => $getdept['dept_name'],
+                                "active" => $res['active']
                             ));
                         }else{
                             echo json_encode(null);

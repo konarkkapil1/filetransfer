@@ -39,7 +39,12 @@
         $name = $res['name'];
         $phone = $res['phone'];
         $email = $res['email'];
+        $active = $res['active'];
 
+        if($active == 0){
+            echo json_encode(["autherror" => "Account is locked! contact admin"]);
+            die();
+        }
         $sql_dept_name = "select * from dept where dept_id='".$deptid."'"; 
         $query_dept_name = mysqli_query($conn,$sql_dept_name);
         if($query_dept_name){
@@ -86,7 +91,7 @@
         ));
     }else{
         echo json_encode(array(
-            "autherror" => "invalid credentials"
+            "autherror" => "Wrong username and password!"
         ));
     }
 
