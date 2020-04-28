@@ -18,13 +18,23 @@
     
     //actually runnning the query written in sql variable and checking if it runs or not
     if(mysqli_query($conn,$sql)){
-        echo json_encode([
-            "success" => "file has been transfered",
-            "tracking_id" => $trackingid
-        ]);
+        $transfer_sql = 'update files set position="'.$to.'" where file_no="'.$filenumber.'"';
+        if(mysqli_query($conn,$transfer_sql)){
+            echo json_encode([
+                "success" => "file has been transfered",
+                "tracking_id" => $trackingid
+            ]);
+        }else{
+            echo json_encode([
+                "error" => "error occured file cannot be transfered 29",
+                "sqlerro " => mysqli_error($conn)
+            ]);
+        }
+        
     }else{
         echo json_encode([
-            "error" => "error occured file cannot be transfered"
+            "error" => "error occured file cannot be transfered 35",
+            "sqlerro " => mysqli_error($conn)
         ]);
     }
 

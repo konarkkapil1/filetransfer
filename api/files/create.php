@@ -16,9 +16,10 @@
     $submittorname = $_POST['submittor_name'];
     $submittorcontact = $_POST['submittor_contact'];
     $submittoremail = $_POST['submittor_email'];
+    $pages = $_POST['pages'];
     $trackingid = uniqid();
     //sql query to be executed to insert file into the database
-    $sql = "insert into files (file_no,file_name,file_desc,dept_id,receiver_id,submittor_name,submittor_contact,submittor_email) VALUES('$fileno','$filename','$filedesc','$deptid','$receiverid','$submittorname','$submittorcontact','$submittoremail')";
+    $sql = "insert into files (file_no,file_name,file_desc,dept_id,receiver_id,submittor_name,submittor_contact,submittor_email,pages,position) VALUES('$fileno','$filename','$filedesc','$deptid','$receiverid','$submittorname','$submittorcontact','$submittoremail','$pages','$userid')";
 
     //assign the movement of file also here
 

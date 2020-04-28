@@ -7,7 +7,7 @@
     use \Firebase\JWT\JWT;
     require "../jwt/decode.php";
 
-    $sql = "select * from movement where from_id='$userid' OR to_id='$userid' ORDER BY serial DESC";
+    $sql = "select * from movement where to_id='$userid' ORDER BY serial DESC";
 
     $query = mysqli_query($conn,$sql);
 
