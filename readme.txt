@@ -1,3 +1,7 @@
+Project contributions
+Uma
+Noshyia wani
+
 File structure details
 
 Whole API works with POST method only
